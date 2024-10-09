@@ -1,4 +1,4 @@
-package edu.ucsb.cs156.spring.hello;
+    package edu.ucsb.cs156.spring.hello;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
