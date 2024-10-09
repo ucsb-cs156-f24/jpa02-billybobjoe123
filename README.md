@@ -28,6 +28,7 @@ This is a minimal "Hello World" type webapp built with Spring Boot.
 
 The code in this repo is in support of
 jpa02 for Fall 2024 for CMPSC 156.
+jpa02 for Fall 2024 for CMPSC 156.
 
 The code in this repo is based in part on the tutorial here:
 <https://spring.io/guides/gs/spring-boot/>, and the code here in the
@@ -41,7 +42,7 @@ below.
 # Modifications from the original
 
 * Java 21 support
-  * Converting `pom.xml` to use Java 17
+  * Converting `pom.xml` to use Java 21
 * JUnit 5
   * Converting test code to use JUnit 5 instead of JUnit 4  
 * Dokku Support
