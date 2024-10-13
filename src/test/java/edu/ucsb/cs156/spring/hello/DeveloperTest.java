@@ -33,10 +33,12 @@ public class DeveloperTest {
     public void getGithubId_returns_correct_id() {
         assertEquals("billybobjoe123",Developer.getGithubId());
     }
+    @Test
     public void getTeam_returns_team_with_correct_name() {
         Team t = Developer.getTeam();
         assertEquals(t.getName(),"f24-02");
     }
+    @Test
     public void getTeam_returns_team_with_correct_members() {
         Team t = Developer.getTeam();
         assertTrue(t.getMembers().contains("Edwin"),"Team should contain Edwin");
