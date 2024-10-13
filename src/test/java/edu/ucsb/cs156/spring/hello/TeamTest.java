@@ -1,11 +1,8 @@
 package edu.ucsb.cs156.spring.hello;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -94,5 +91,32 @@ public class TeamTest {
         
         String expectedToString3 = "Team(name=TeamA, members=[Alice, Bob])";
         assert team2.toString().equals(expectedToString3) : "Expected: " + expectedToString3 + ", but got: " + team2.toString();
+    }
+    @Test
+    public void hashCode_returns_correct_code() {
+        // instantiate t as a Team object
+        
+
+        Team t1 = new Team();
+        t1.setName("foo");
+        t1.addMember("bar");
+        int result = t1.hashCode();
+        int expectedResult = 130294;
+        assertEquals(expectedResult, result);
+        Team t2 = new Team();
+        t2.setName("foo");
+        t2.addMember("bar");
+        assertEquals(t1.hashCode(), t2.hashCode());
+        Team t3 = new Team();
+        t3.setName("alex");
+        t3.addMember("kevin");
+        Team t4 = new Team();
+        t4.setName("daniel");
+        t4.addMember("eric");
+        assertNotEquals(t3.hashCode(), t4.hashCode());
+        Team t5 = new Team();
+        t3.setName("foo");
+        t3.addMember("eyy");
+        assertNotEquals(t1, t5);
     }
 }
